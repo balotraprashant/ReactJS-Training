@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Clock</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #0028ebab;
+  }
+
+  #display {
+    font-size: 5rem;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+    <h3 id="display"></h3>
+</div>
+<script>
+  function printElement() {
+    const arr = [1,2,3,4,5];
+
+    let index = 0;
+    
+    const intervalId = setInterval(() => {
+        if(index<arr.length){
+            document.getElementById('display').innerText = arr[index];
+            index++;
+        } else {
+            document.getElementById('display').innerText = 'Khatam, tata bye bye !';
+            clearInterval(intervalId);
+        }
+    }, 3000);
+  }
+
+  printElement();
+</script>
+</body>
+</html>

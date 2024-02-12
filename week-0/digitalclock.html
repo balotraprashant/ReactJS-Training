@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Clock</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #0028ebab;
+  }
+
+  .clock-container {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  #greeting {
+    font-size: 5rem;
+  }
+  #clock {
+    font-size: 3rem;
+  }
+  #separator {
+    width: 75%;
+  }
+  #date {
+    font-size: 2rem;
+  }
+</style>
+</head>
+<body>
+<div class="clock-container">
+    <h3 id="greeting"></h3>
+    <hr id="separator"></hr>
+    <h1 id="clock"></h1>
+    <p id="date"></p>
+</div>
+<script>
+  function updateClock() {
+    const now = new Date();
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+    const timeString = `${hours}:${minutes}:${seconds}`;
+    const date = now.toLocaleDateString();
+    
+    document.getElementById('clock').innerText = timeString;
+    
+
+    let greeting = 'Good Morning';
+    if (hours >= 5 && hours < 12) {
+      greeting = 'Good Morning';
+    } else if (hours >= 12 && hours < 17) {
+      greeting = 'Good Afternoon';
+    } else if (hours >= 17 && hours < 20) {
+      greeting = 'Good Evening';
+    } else {
+      greeting = 'Good Night';
+    }
+
+    document.getElementById('greeting').innerText = greeting;
+
+    document.getElementById('date').innerText = date;
+  }
+
+  setInterval(updateClock, 1000);
+  updateClock(); // To immediately display the clock when the page loads
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+.product {
+    width: 120px;
+    font-size: 10px;
+    padding: 10px;
+    flex: 0 0 calc(16.333% - 20px);
+    margin: 10px;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-img {
+    height: 100px;
+    width: 120px;
+}

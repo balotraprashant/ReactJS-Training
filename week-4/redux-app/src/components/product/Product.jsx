@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './Product.css';
-import { useCart } from '../../context/CartContext';
 import { doFetchProducts } from './product.actions';
+import { addToCart } from './../cart/cartSlice';
 
 function Products() {
-  // const [products, setProducts] = useState([]);
-  const { addToCart } = useCart();
+  // const { addToCart } = useCart();
 
   const dispatch = useDispatch();
 
@@ -17,7 +16,7 @@ function Products() {
   const products = useSelector((state) => state.products);
 
   const handleAddToCart = (product) => {
-    addToCart(product);
+    dispatch(addToCart(product)); // Dispatch the addToCart action with the product as payload
   };
 
   return (

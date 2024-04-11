@@ -1,0 +1,16 @@
+h1#logo {
+	position:absolute;
+	top:37px;
+	left:0;
+    float:left;
+	width:239px;
+	height:49px;
+	background:url('../../../public/logo-no-background.svg') no-repeat 0 0;
+	font-size:0;
+	line-height:0;
+	text-indent:-4000px;
+	background-size: contain;
+}
+/* h1#logo a {
+	
+} */

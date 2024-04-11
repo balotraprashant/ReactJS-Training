@@ -38,15 +38,15 @@ export const searchMovies = createAsyncThunk('search/movie',
 
 export const fetchPopular = createAsyncThunk('movie/fetchPopular',
   async () => {
-    const options = {
-      method: 'GET',
-      url: 'https://imdb8.p.rapidapi.com/title/v2/get-popular',
-      params: { first: '12' },
-      headers: {
-        'X-RapidAPI-Key': 'b23d64856cmsh3884b5697cdd805p10bf93jsn7c94c9d8caf4',
-        'X-RapidAPI-Host': 'imdb8.p.rapidapi.com'
-      }
-    };
+    // const options = {
+    //   method: 'GET',
+    //   url: 'https://imdb8.p.rapidapi.com/title/v2/get-popular',
+    //   params: { first: '12' },
+    //   headers: {
+    //     'X-RapidAPI-Key': 'b23d64856cmsh3884b5697cdd805p10bf93jsn7c94c9d8caf4',
+    //     'X-RapidAPI-Host': 'imdb8.p.rapidapi.com'
+    //   }
+    // };
 
     try {
       // const response = await axios.request(options);

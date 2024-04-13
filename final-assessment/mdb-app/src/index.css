@@ -107,7 +107,7 @@ h4 {
 	float:left;
 	display:inline;
 	width:16px;
-	padding-right:2px;
+	padding-right: 20px;
 }
 .social ul li a {
 	float:left;
@@ -383,4 +383,8 @@ h4 {
 .play {
 	background-image:none;
  	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./../public/images/image-hover.png', sizingMethod='image');
+}
+
+.text-gray-900 {
+    --tw-text-opacity: auto;
 }

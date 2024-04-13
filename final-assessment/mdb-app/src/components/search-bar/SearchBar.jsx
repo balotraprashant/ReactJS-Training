@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { getMovies } from '../../redux/moviesSlice';
+import './SearchBar.css';
 
 const SearchBar = () => {
   const dispatch = useDispatch();

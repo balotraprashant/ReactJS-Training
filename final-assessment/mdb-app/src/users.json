@@ -1,0 +1,24 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "firstName": "Prashant",
+            "lastName": "Balotra",
+            "maidenName": "",
+            "age": 27,
+            "gender": "male",
+            "email": "balotra.prashant@gmail.com",
+            "phone": "+91 99999 99991",
+            "username": "prashantbalotra",
+            "password": "React@123",
+            "birthDate": "1997-03-24",
+            "image": "https://robohash.org/Terry.png?set=set4",
+            "address": {
+                "address": "V.P.O. Sohanjana",
+                "city": "Jammu",
+                "postalCode": "180003",
+                "state": "JK"
+            }
+        }
+    ]
+}
